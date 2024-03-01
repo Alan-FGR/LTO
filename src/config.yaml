@@ -1,7 +1,7 @@
 site:
   name: WonderBox
-  site: 'https://Alan-FGR.github.io/LTO'
-  base: '/LTO'
+  site: 'https://wonderbox.tech'
+  base: ''
   trailingSlash: false
 
   googleSiteVerificationId: false
