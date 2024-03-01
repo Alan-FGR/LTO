@@ -27,3 +27,6 @@ pnpm-lock.yaml
 /.vs
 /.vscode
 /.idea
+
+# NODE BINARIES
+/node-*

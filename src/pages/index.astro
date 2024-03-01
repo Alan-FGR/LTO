@@ -2,18 +2,21 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
+import Note2 from '~/components/widgets/Note2.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
+//import Steps from '~/components/widgets/Steps.astro';
+import Steps3 from '~/components/widgets/Steps3.astro';
+//import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
+//import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
+import { Icon } from 'astro-icon/components';
+
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'WonderBox - Game On for Learning!',
   ignoreTitleTemplate: true,
 };
 ---
@@ -21,87 +24,88 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
+  <Fragment slot="announcement"></Fragment>
+
   <Hero
     actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
+      // {
+      //   variant: 'primary',
+      //   text: 'Get template',
+      //   href: 'https://github.com/onwidget/astrowind',
+      //   target: '_blank',
+      //   icon: 'tabler:download',
+      // },
       { text: 'Learn more', href: '#features' },
     ]}
-    image={{ src: '~/assets/images/hero.png', alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 4.0</span> + Tailwind CSS
+      Within The <span class="text-accent dark:text-white highlight">WonderBox</span> Lies a World Where Gaming Fosters Education.
+      <p style="
+      font-size: 2.5rem;
+      letter-spacing: -.1rem;
+      font-weight: normal;">
+      Once Opened, An Unstoppable Quest for Knowledge Begins, Leading Players on a Journey of Learning and Discovery</p>
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 4.0
-        + Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-       Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages
-      & Blogs.
+      <span class="text-accent">WonderBox</span> is an educational platform where gaming and education coexist seamlessly without restrictions.
+      Designed to attract all audiences, it offers interactive journeys across <span title="Science, Technology, Engineering, and Mathematics">STEM</span>, arts, literature and more, and by providing a convenient platform for educators, as well as entertaining experiences for learners, WonderBox makes education captivating, accessible and effective for all.
     </Fragment>
   </Hero>
 
   <!-- Note Widget ******************* -->
 
-  <Note />
+  <Note2>
+    <span class="font-bold">WonderBox: </span>Making Educational Entertainment <span class="font-bold">both</span> Educative and Entertaining
+  </Note2>
 
   <!-- Features Widget *************** -->
 
   <Features
     id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
+    title="Features"
+    subtitle="What's Inside The WonderBox?"
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        title: 'Effective All-round Education',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
+          'WonderBox helps users learn all areas of study; from STEM to arts and language, and allows educators to freely create content for teaching virtually anything.',
+        icon: 'tabler:school',
       },
       {
-        title: 'Ready-to-use Components',
+        title: 'Immersive and Interactive Learning',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
+          'WonderBox immerses its users in an interactive game-based learning experience, enabling them to learn while having fun with their friends and educators.',
+        icon: 'tabler:device-gamepad-2',
       },
       {
-        title: 'Best Practices',
+        title: 'Content Creation',
         description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
+          'Box not only provides built-in tools for educators and content creators, but imports industry-standard 3D models and audio files so advanced external tools can be used for creating content for WonderBox.',
+        icon: 'tabler:hammer',
       },
       {
-        title: 'Excellent Page Speed',
+        title: 'Knowledge-Based Progression',
         description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
+          'In WonderBox, the virtual progression reflects the knowledge and skills of the user, there’s no character skill levels, what sets the level of difficulty in the virtual world is the knowledge of the real-world user.',
+        icon: 'tabler:route',
       },
       {
-        title: 'Search Engine Optimization (SEO)',
+        title: 'Educator Moderation and Customization',
         description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
+          "WonderBox enables educators to edit, moderate, and customize the virtual experiences according to their educational needs and goals for their students.",
+        icon: 'tabler:eye-check',
       },
       {
-        title: 'Open to new ideas and contributions',
+        title: 'Simple Cross-Platform Access',
         description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
+          'WonderBox is primarily a web-based application which can be easily accessed on smartphones, tablets, and all variations of personal computers. The system requirements are a modern browser and any reasonably recent machine.',
+        icon: 'tabler:devices',
       },
     ]}
   />
 
-  <!-- Content Widget **************** -->
+  <!-- Content Widget **************** --1>
 
   <Content
     isReversed
@@ -139,7 +143,7 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
+  <!1-- Content Widget **************** --1>
 
   <Content
     isAfterContent
@@ -176,7 +180,7 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
+  <!1-- Content Widget **************** --1>
 
   <Content
     isReversed
@@ -214,7 +218,7 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Steps Widget ****************** -->
+  <1!-- Steps Widget ****************** --1>
 
   <Steps
     title="Get your dream website up and running in no time with AstroWind."
@@ -248,62 +252,27 @@ const metadata = {
     }}
   />
 
-  <!-- Features2 Widget ************** -->
+  <1!-- Features2 Widget ************** -->
 
   <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
+    id="products"
+    title="Products"
+    subtitle="What Makes WonderBox Awesome?"
     items={[
       {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
+        title: 'Web Based Client Application',
+        description: "The WonderBox client is designed primarily as a web application in order to be easily accessible on any device. It's simple to use and works on many screen sizes and shapes. The technologies that power the client are open standards and therefore should be very compatible, and the system requirements are kept to a minimum so any reasonably modern device can run the client without problems.",
+        icon: 'flat-color-icons:multiple-devices',
       },
       {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
+        title: 'Map and Experiences Editor',
+        description: 'WonderBox provides educators with tools for editing meaningful educational experiences. Objects can be positioned on the map and linked with "logic wires" for virtually limitless creations. WonderBox also imports 3D models in the de-facto industry-standard glTF format (with animations and PBR rendering for consistent visuals), as well as many popular audio formats for advanced creations.',
+        icon: 'flat-color-icons:edit-image',
       },
       {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
+        title: 'Backend Application',
+        description: "The software that powers all WonderBox clients is a modern application that can be either hosted in the cloud or on-premises. With its integrations, it provides clients with important options when it comes to data privacy, as well as security. Industry's best practices were applied to ensure the most reliable and performant system possible to power the endless experiences provided to our users.",
+        icon: 'flat-color-icons:parallel-tasks',
       },
     ]}
   >
@@ -312,7 +281,7 @@ const metadata = {
     </Fragment>
   </Features2>
 
-  <!-- HighlightedPosts Widget ******* -->
+  <!-- HighlightedPosts Widget ******* --1>
 
   <BlogLatestPosts
     title="Find out more content in our Blog"
@@ -322,48 +291,48 @@ const metadata = {
                 `}
   />
 
-  <!-- FAQs Widget ******************* -->
+  <!1-- FAQs Widget ******************* -->
 
   <FAQs
+    id="faq"
     title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
-    tagline="FAQs"
+    tagline="FAQ"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Why AstroWind?',
+        title: 'What age group is WonderBox suitable for?',
         description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+          "WonderBox is designed for users of all ages. The platform doesn't impose any restrictions in the virtual experiences, allowing content creators and teachers to tailor experiences for audiences of any age.",
       },
       {
-        title: 'What do I need to start?',
+        title: 'How does WonderBox integrate learning with gameplay?',
         description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+          'WonderBox ships with a “base experience” and provides a number of tools for the creation of content by its users. The content created within or imported in WonderBox ranges from simple non-interactive virtual objects and sounds, to fully fledged experiences.',
       },
       {
-        title: 'How to install the Astro + Tailwind CSS template?',
+        title: 'Can WonderBox be accessed on various devices?',
         description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+          "Yes, WonderBox is designed for the web, and is primarily accessible via a web browser on any relatively modern device, by going to the app web page and signing into the system, what can be done using credentials or external providers such as Google or Facebook (depending on the host).",
       },
       {
-        title: "What's something that you don't understand?",
+        title: "How can teachers customize content in WonderBox?",
         description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+          "WonderBox provides a map editor that allows content creators to place objects on the map and connect them with wires and logic gates, allowing the creation of full gameplay mechanics (within the limitations of the base platform). WonderBox also allows creators to import 3D models in the de facto industry-standard format GLTF as well as many audio formats.",
       },
       {
-        title: 'What is something that you would like to try again?',
+        title: 'Is WonderBox safe for children to use?',
         description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+          "Yes! At WonderBox Technologies, safety is a top priority. The platform itself provides robust means to moderate all content and interaction, as well as complete audit trails. Technologically, WonderBox is built on some of the safest and most reliable technologies in existence, employing the industry’s best practices to provide our users with peace of mind regarding their privacy and data. Experience hosts also have the option to use external identity providers and even have the server setup on-premises.",
       },
       {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
+        title: 'How does WonderBox adapt to each child’s learning pace?',
         description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+          "WonderBox provides an uncountable number of different educational experiences, all categorized in detail by their level of difficulty and area of knowledge, as well as by statistical data collected from past plays of each experience. All this information is used by an algorithm to suggest and create a sequence of smoothly transitioning experiences that iteratively develop the user’s skills and knowledge.",
       },
     ]}
   />
 
-  <!-- Stats Widget ****************** -->
+  <!-- Stats Widget ****************** --1>
 
   <Stats
     stats={[
@@ -374,10 +343,44 @@ const metadata = {
     ]}
   />
 
-  <!-- CallToAction Widget *********** -->
+  <!1-- CallToAction Widget *********** -->
 
+  <Features2
+    id="about"
+    title="About Us"
+    subtitle="At WonderBox we firmly believe that games and education should coexist in harmony. It's absolute consensus among us that learning should be an adventure, exciting and fulfilling. With our products, we are disrupting the idea that having fun and learning are opposite and incompatible. We are redefining education to become trully entertaining and captivating and we believe the future of effective education is in interactive learning: each experience powered by WonderBox is a learning adventure; every lesson done brings immediate fulfillment, every discovery promotes a general sense of wonder."
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <Steps3
+    id="contact"
+    title="Contact us"
+    subtitle="Feel free to contact us using any of the following means."
+    callToAction={{
+      text: 'Email us for any inquiries!',
+      href: 'mailto:contact@wonderbox.tech',
+    }}
+    items={[
+      {
+        title: 'Email us',
+        description: 'contact@wonderbox.tech',
+        icon: 'tabler:mail',
+        link: 'mailto:contact@wonderbox.tech'
+      },
+      {
+        title: 'Follow us',
+        description: '@WonderBoxTech',
+        icon: 'tabler:brand-twitter',
+        link: "https://x.com/WonderBoxTech"
+      },
+    ]}
+  />
+<!--
   <CallToAction
-    actions={[
+  actions={[
       {
         variant: 'primary',
         text: 'Get template',
@@ -385,15 +388,16 @@ const metadata = {
         target: '_blank',
         icon: 'tabler:download',
       },
-    ]}
-  >
-    <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
-    </Fragment>
-  </CallToAction>
+      ]}
+      >
+      <Fragment slot="title">
+        Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+      </Fragment>
+      
+      <Fragment slot="subtitle">
+        Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
+        waste more time! :P
+      </Fragment>
+    </CallToAction>
+  -->  
 </Layout>

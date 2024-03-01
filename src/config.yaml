@@ -1,30 +1,30 @@
 site:
-  name: LTO
+  name: WonderBox
   site: 'https://Alan-FGR.github.io/LTO'
   base: '/LTO'
   trailingSlash: false
 
-  googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
+  googleSiteVerificationId: false
 
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: WonderBox
+    template: '%s — WonderBox'
+  description: ""
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: WonderBox
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
+    handle: null
+    site: null
     cardType: summary_large_image
 
 i18n:
@@ -33,7 +33,7 @@ i18n:
 
 apps:
   blog:
-    isEnabled: true
+    isEnabled: false
     postsPerPage: 6
 
     post:
@@ -74,7 +74,7 @@ ui:
   tokens:
     default:
       fonts:
-        sans: InterVariable
+        sans: sans-serif
         serif: var(--ph-font-sans)
         heading: var(--ph-font-sans)
       colors:
