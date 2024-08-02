@@ -114,11 +114,11 @@ export const headerData = {
     //   text: 'Widgets',
     //   href: '#',
     // },
-    { text: 'Features', href: '#features' },
-    { text: 'Products', href: '#products' },
-    { text: 'FAQ', href: '#faq' },
-    { text: 'About Us', href: '#about' },
-    { text: 'Contact', href: '#contact' },
+    { text: 'Features', href: getPermalink('/#features') },
+    { text: 'Products', href: getPermalink('/#products') },
+    { text: 'FAQ', href: getPermalink('/#faq') },
+    { text: 'About Us', href: getPermalink('/#about') },
+    { text: 'Contact', href: getPermalink('/#contact') },
   ],
 
   actions: [{ text: 'Launch App', href: '#'}]
@@ -177,6 +177,7 @@ export const footerData = {
   ],
   socialLinks: [
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/WonderBoxTech' },
+    { ariaLabel: 'Mastodon', rel: "me", icon: 'tabler:brand-mastodon', href: 'https://mastodon.social/@WonderBox' }, // rel="me" for Mastodon Verification
     // { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
     // { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
     // { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },

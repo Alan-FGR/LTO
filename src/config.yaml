@@ -11,7 +11,7 @@ metadata:
   title:
     default: WonderBox
     template: '%s — WonderBox'
-  description: ""
+  description: "WonderBox is an educational platform where gaming and education coexist seamlessly without restrictions."
   robots:
     index: true
     follow: true

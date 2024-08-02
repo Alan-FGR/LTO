@@ -10,7 +10,7 @@ const createPath = (...params: string[]) => {
     .map((el) => trimSlash(el))
     .filter((el) => !!el)
     .join('/');
-  return '/' + paths + (SITE.trailingSlash && paths ? '/' : '');
+  return '/' + paths;
 };
 
 const BASE_PATHNAME = SITE.base || '/';
@@ -60,7 +60,7 @@ export const getPermalink = (slug = '', type = 'page'): string => {
       permalink = createPath(slug);
       break;
   }
-
+  
   return definitivePermalink(permalink);
 };
 
